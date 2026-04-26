@@ -9,7 +9,7 @@
       "name": "claude-usage-in-status",
       "source": {
         "source": "github",
-        "repo": "rafsuntaskin/usage-tracker-plugin"
+        "repo": "rafsuntaskin/claude-usage-in-status"
       },
       "description": "Live token usage and rate limit status in your statusline after every prompt.",
       "category": "productivity",
