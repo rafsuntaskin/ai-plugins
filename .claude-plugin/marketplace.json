@@ -1,0 +1,19 @@
+{
+  "name": "ai-plugins",
+  "owner": {
+    "name": "rafsuntaskin",
+    "email": "rafsun.aiub@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "claude-usage-in-status",
+      "source": {
+        "source": "github",
+        "repo": "rafsuntaskin/usage-tracker-plugin"
+      },
+      "description": "Live token usage and rate limit status in your statusline after every prompt.",
+      "category": "productivity",
+      "tags": ["tokens", "usage", "statusline", "rate-limits", "context-window"]
+    }
+  ]
+}
