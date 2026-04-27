@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/rafsuntaskin/Downloads/ai-plugins log --oneline)",
+      "Bash(git -C /Users/rafsuntaskin/Downloads/ai-plugins remote -v)"
+    ]
+  }
+}
