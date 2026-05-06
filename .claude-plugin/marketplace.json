@@ -13,7 +13,29 @@
       },
       "description": "Live token usage and rate limit status in your statusline after every prompt.",
       "category": "productivity",
-      "tags": ["tokens", "usage", "statusline", "rate-limits", "context-window"]
+      "tags": [
+        "tokens",
+        "usage",
+        "statusline",
+        "rate-limits",
+        "context-window"
+      ]
+    },
+    {
+      "name": "stackshot",
+      "source": {
+        "source": "github",
+        "repo": "rafsuntaskin/stackshot"
+      },
+      "description": "Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals.",
+      "category": "productivity",
+      "tags": [
+        "skills",
+        "tech-stack",
+        "image-generation",
+        "repository-analysis",
+        "social-card"
+      ]
     }
   ]
 }

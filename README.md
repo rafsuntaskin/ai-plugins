@@ -13,6 +13,7 @@ claude plugin marketplace add rafsuntaskin/ai-plugins
 | Plugin | Description | Category |
 |--------|-------------|----------|
 | [claude-usage-in-status](https://github.com/rafsuntaskin/claude-usage-in-status) | Live token usage and rate limit status in your statusline after every prompt | productivity |
+| [stackshot](https://github.com/rafsuntaskin/stackshot) | Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals | productivity |
 
 ---
 
