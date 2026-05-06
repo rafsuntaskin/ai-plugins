@@ -1,83 +1,77 @@
 # ai-plugins
 
-A curated marketplace of plugins for AI coding assistants.
+A curated marketplace registry for AI coding assistant plugins.
 
-## Add this marketplace to Claude
+The marketplace manifest lives at:
+
+```text
+.claude-plugin/marketplace.json
+```
+
+## Add This Marketplace
+
+### Claude Code
 
 ```bash
 claude plugin marketplace add rafsuntaskin/ai-plugins
 ```
 
+After adding the marketplace, install a listed plugin by name from Claude Code's plugin UI or plugin command flow.
+
+### Codex
+
+```bash
+codex plugin marketplace add rafsuntaskin/ai-plugins
+```
+
+Then install a listed plugin by name:
+
+```bash
+codex plugin add stackshot
+```
+
 ## Plugins
 
-| Plugin | Description | Category |
-|--------|-------------|----------|
-| [claude-usage-in-status](https://github.com/rafsuntaskin/claude-usage-in-status) | Live token usage and rate limit status in your statusline after every prompt | productivity |
-| [stackshot](https://github.com/rafsuntaskin/stackshot) | Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals | productivity |
+| Plugin | Description | Category | Direct install |
+|--------|-------------|----------|----------------|
+| [claude-usage-in-status](https://github.com/rafsuntaskin/claude-usage-in-status) | Live token usage and rate limit status in your statusline after every prompt | productivity | `claude plugin add github:rafsuntaskin/claude-usage-in-status` |
+| [stackshot](https://github.com/rafsuntaskin/stackshot) | Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals | productivity | `codex plugin add github:rafsuntaskin/stackshot` |
 
----
+## Direct GitHub Install
 
-## Adding a Plugin to Claude Code
+If you do not want to use the marketplace, install a plugin directly from its GitHub repo.
 
-### Install via MCP (recommended)
-
-```bash
-claude mcp add github:rafsuntaskin/<plugin-name>
-```
-
-Or install from a local path:
+For Codex:
 
 ```bash
-claude mcp add /path/to/plugin
+codex plugin add github:rafsuntaskin/stackshot
 ```
 
-### Manual install
-
-1. Clone the plugin repo:
-   ```bash
-   git clone https://github.com/rafsuntaskin/<plugin-name>
-   ```
-2. Add it to your Claude Code settings:
-   ```bash
-   claude mcp add /path/to/<plugin-name>
-   ```
-3. Restart Claude Code.
-
----
-
-## Adding a Plugin to Codex
-
-### Install via npm (if published)
+For Claude Code:
 
 ```bash
-npm install -g @rafsuntaskin/<plugin-name>
-codex plugin add @rafsuntaskin/<plugin-name>
+claude plugin add github:rafsuntaskin/claude-usage-in-status
 ```
 
-### Install from GitHub
+## Local Development
+
+Clone a plugin repo, then install from the local path:
 
 ```bash
-codex plugin add github:rafsuntaskin/<plugin-name>
+git clone https://github.com/rafsuntaskin/stackshot.git
+codex plugin add ./stackshot
 ```
 
-### Manual install
+For Claude Code plugins:
 
-1. Clone the plugin repo:
-   ```bash
-   git clone https://github.com/rafsuntaskin/<plugin-name>
-   cd <plugin-name>
-   npm install
-   ```
-2. Register it with Codex:
-   ```bash
-   codex plugin add .
-   ```
+```bash
+git clone https://github.com/rafsuntaskin/claude-usage-in-status.git
+claude plugin add ./claude-usage-in-status
+```
 
----
+## Submit A Plugin
 
-## Submit a Plugin
-
-To add your plugin to this marketplace, open a pull request and add an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
+To add a plugin to this marketplace, open a pull request and add an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
 
 ```json
 {
