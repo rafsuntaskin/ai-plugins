@@ -8,8 +8,8 @@
     {
       "name": "claude-usage-in-status",
       "source": {
-        "source": "github",
-        "repo": "rafsuntaskin/claude-usage-in-status"
+        "source": "url",
+        "url": "https://github.com/rafsuntaskin/claude-usage-in-status.git"
       },
       "description": "Live token usage and rate limit status in your statusline after every prompt.",
       "category": "productivity",
@@ -24,8 +24,8 @@
     {
       "name": "stackshot",
       "source": {
-        "source": "github",
-        "repo": "rafsuntaskin/stackshot"
+        "source": "url",
+        "url": "https://github.com/rafsuntaskin/stackshot.git"
       },
       "description": "Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals.",
       "category": "productivity",

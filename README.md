@@ -24,28 +24,30 @@ After adding the marketplace, install a listed plugin by name from Claude Code's
 codex plugin marketplace add rafsuntaskin/ai-plugins
 ```
 
-Then install a listed plugin by name:
+This registers the marketplace with Codex. In the current Codex CLI, `codex plugin` only supports marketplace management from the terminal (`marketplace add`, `marketplace upgrade`, and `marketplace remove`). It does not provide a `codex plugin add <plugin>` subcommand.
 
-```bash
-codex plugin add stackshot
-```
+After adding the marketplace, use Codex's plugin UI or plugin selection flow when available. For StackShot, you can also install the skill directly with the fallback below.
 
 ## Plugins
 
 | Plugin | Description | Category | Direct install |
 |--------|-------------|----------|----------------|
 | [claude-usage-in-status](https://github.com/rafsuntaskin/claude-usage-in-status) | Live token usage and rate limit status in your statusline after every prompt | productivity | `claude plugin add github:rafsuntaskin/claude-usage-in-status` |
-| [stackshot](https://github.com/rafsuntaskin/stackshot) | Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals | productivity | `codex plugin add github:rafsuntaskin/stackshot` |
+| [stackshot](https://github.com/rafsuntaskin/stackshot) | Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals | productivity | Copy `STACKSHOT.md` into `~/.codex/skills/stackshot/SKILL.md` |
 
-## Direct GitHub Install
+## Direct Install Fallbacks
 
-If you do not want to use the marketplace, install a plugin directly from its GitHub repo.
+If you do not want to use the marketplace, install a plugin directly from its GitHub repo when your assistant supports that command.
 
-For Codex:
+For StackShot in Codex, install the skill directly:
 
 ```bash
-codex plugin add github:rafsuntaskin/stackshot
+git clone https://github.com/rafsuntaskin/stackshot.git
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/stackshot"
+cp stackshot/STACKSHOT.md "${CODEX_HOME:-$HOME/.codex}/skills/stackshot/SKILL.md"
 ```
+
+Start a new Codex session after copying the skill.
 
 For Claude Code:
 
@@ -59,7 +61,8 @@ Clone a plugin repo, then install from the local path:
 
 ```bash
 git clone https://github.com/rafsuntaskin/stackshot.git
-codex plugin add ./stackshot
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/stackshot"
+cp stackshot/STACKSHOT.md "${CODEX_HOME:-$HOME/.codex}/skills/stackshot/SKILL.md"
 ```
 
 For Claude Code plugins:
