@@ -34,6 +34,7 @@ After adding the marketplace, use Codex's plugin UI or plugin selection flow whe
 |--------|-------------|----------|----------------|
 | [claude-usage-in-status](https://github.com/rafsuntaskin/claude-usage-in-status) | Live token usage and rate limit status in your statusline after every prompt | productivity | `claude plugin add github:rafsuntaskin/claude-usage-in-status` |
 | [stackshot](https://github.com/rafsuntaskin/stackshot) | Generate repository tech stack card image prompts from project metadata, LOC, tests, tools, and styling signals | productivity | Copy `STACKSHOT.md` into `~/.codex/skills/stackshot/SKILL.md` |
+| [hermes-tweet](https://github.com/Xquik-dev/hermes-tweet) | Native Hermes Agent X/Twitter plugin for read-first research and approval-gated actions | productivity | `claude plugin add github:Xquik-dev/hermes-tweet` |
 
 ## Direct Install Fallbacks
 

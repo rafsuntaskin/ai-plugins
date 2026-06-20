@@ -36,6 +36,22 @@
         "repository-analysis",
         "social-card"
       ]
+    },
+    {
+      "name": "hermes-tweet",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Xquik-dev/hermes-tweet.git"
+      },
+      "description": "Native Hermes Agent X/Twitter plugin for read-first research and approval-gated actions.",
+      "category": "productivity",
+      "tags": [
+        "hermes-agent",
+        "twitter",
+        "x",
+        "xquik",
+        "social-media"
+      ]
     }
   ]
 }
